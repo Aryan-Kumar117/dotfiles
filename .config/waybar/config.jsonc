@@ -36,19 +36,19 @@
   },
   "clock": {
     "timezone": "India/Kolkata",
-    "format": "{:%I:%M  %d, %m}",
+    "format": "{:%I:%M %p  %d %b %Y}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month"
     }
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": "{usage}% CPU",
     "tooltip": true,
     "tooltip-format": "Uso de CPU: {usage}%\nNúcleos: {cores}"
   },
   "memory": {
-    "format": "{}% 󰍛",
+    "format": "{}% RAM",
     "tooltip": true,
     "tooltip-format": "RAM used: {used} / {total} ({percentage}%)"
   },
@@ -58,6 +58,8 @@
     "tooltip-format": "Available free space: {free} / {total} ({percentage_free}%)"
   },
   "temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "format": "{temperatureC}°C {icon}",
     "tooltip": true,
     "tooltip-format": "Average temperature: {temperatureC}°C",
