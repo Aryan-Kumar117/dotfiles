@@ -24,3 +24,5 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 alias config='/usr/bin/git --git-dir=/home/aryan/.cfg/ --work-tree=/home/aryan'
+alias rm='rm -i'
+eval "$(starship init bash)"
