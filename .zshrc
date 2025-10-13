@@ -12,8 +12,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd beep notify
-bindkey -v
 # End of lines configured by zsh-newuser-install
 eval "$(starship init zsh)"
 alias rm='rm -i'
 alias config='/usr/bin/git --git-dir=/home/aryan/.cfg/ --work-tree=/home/aryan'
+PROMPT_EOL_MARK=''
+export PATH="$HOME/.local/bin:$PATH"
