@@ -20,3 +20,4 @@ PROMPT_EOL_MARK=''
 export PATH="$HOME/.local/bin:$PATH"
 
 alias vim='nvim'
+alias clock='tty-clock -C 7 -b -B -c'
