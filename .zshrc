@@ -19,5 +19,12 @@ alias config='/usr/bin/git --git-dir=/home/aryan/.cfg/ --work-tree=/home/aryan'
 PROMPT_EOL_MARK=''
 export PATH="$HOME/.local/bin:$PATH"
 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gs='git status'
+alias ga='git add .'
+alias gp='git push'
 alias vim='nvim'
 alias clock='tty-clock -C 7 -b -B -c'
+bindkey "\e[3~" delete-char
