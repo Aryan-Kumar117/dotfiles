@@ -11,6 +11,10 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 setopt autocd beep notify
 # End of lines configured by zsh-newuser-install
 eval "$(starship init zsh)"
