@@ -1,3 +1,4 @@
+
 /* -- Global rules -- */
 * {
   border: none;
@@ -7,14 +8,14 @@
 }
 
 window#waybar {
-  background: rgba(34, 36, 54, 0.6);
+  background: rgba(24, 25, 38, 0.3);
 }
 
 window#waybar.hidden {
   opacity: 0.2;
 }
 
-/* - Genera rules for visible modules -- */
+/* - General rules for visible modules -- */
 #custom-archicon,
 #clock,
 #cpu,
@@ -27,8 +28,10 @@ window#waybar.hidden {
 #network,
 #tray,
 #battery,
-#language {
-  color: #161320;
+#language,
+#cava,
+#backlight {
+  color: #ECEFF4;
   margin-top: 6px;
   margin-bottom: 6px;
   padding-left: 10px;
@@ -45,7 +48,7 @@ window#waybar.hidden {
   border-bottom-left-radius: 10px;
 }
 
-/* Separation to the rigth */
+/* Separation to the right */
 #clock,
 #temperature,
 #language {
@@ -59,41 +62,46 @@ window#waybar.hidden {
 /* Modules left */
 #custom-archicon {
   font-size: 20px;
-  color: #89B4FA;
-  background: #161320;
+  color: #A6E3A1;
+  background: #1E1E2E;
   padding-right: 17px;
 }
 
 #clock {
-  background: #ABE9B3;
+  background: #89B4FA;
+  color: #1E1E2E;
 }
 
 #cpu {
-  background: #96CDFB;
+  background: #F38BA8;
+  color: #1E1E2E
 }
 
 #memory {
-  background: #DDB6F2;
+  background: #F9E2AF;
+  color: #1E1E2E;
 }
 
 #disk {
-  background: #F5C2E7;
+  background: #B4BEFE;
+  color: #1E1E2E;
 }
 
 #temperature {
-  background: #F8BD96;
+  background: #94E2D5;
+  color: #1E1E2E;
 }
 
 /* Modules center */
 #workspaces {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(30, 30, 46, 0.7);
   border-radius: 10px;
   margin: 6px 5px;
   padding: 0px 6px;
 }
 
 #workspaces button {
-  color: #B5E8E0;
+  color: #BAC2DE;
   background: transparent;
   padding: 4px 4px;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
@@ -105,14 +113,12 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #89B4FA;
-  text-shadow: 0 0 4px #ABE9B3;
+  text-shadow: 0 0 4px #89B4FA;
 }
 
 #workspaces button:hover {
-  color: #89B4FA;
+  color: #F5C2E7;
 }
-
-#workspaces button.active:hover {}
 
 /* Modules right */
 #taskbar {
@@ -130,47 +136,61 @@ window#waybar.hidden {
 }
 
 #taskbar button.active {
-  background: rgba(34, 36, 54, 0.5);
+  background: rgba(137, 180, 250, 0.2);
 }
 
 #taskbar button:hover {
-  background: rgba(34, 36, 54, 0.5);
+  background: rgba(180, 190, 254, 0.2);
 }
 
 #idle_inhibitor {
-  background: #B5E8E0;
+  background: #F5C2E7;
+  color: #1E1E2E;
   padding-right: 15px;
 }
 
 #pulseaudio {
-  color: #1A1826;
-  background: #F5E0DC;
+  background: #313244;
 }
 
 #pulseaudio_slider {
-  color: #1A1826;
-  background: #E8A2AF;
+  color: #1E1E2E;
+  background: #A6E3A1;
 }
 
 #network {
-  background: #CBA6F7;
+  background: #89DCEB;
+  color: #1E1E2E;
   padding-right: 13px;
 }
 
-#battery{
-  background:#2596BE;
+#battery {
+  background: #CBA6F7;
+  color: #1E1E2E;
   padding-right: 13px;
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #language {
-  background: #A6E3A1;
+  background: #F9E2AF;
+  color: #1E1E2E;
   padding-right: 15px;
+}
+
+#cava {
+  background: #45475A;
+}
+
+#backlight{
+  background: #111111;
 }
 
 /* === Optional animation === */
 @keyframes blink {
   to {
-    background-color: #BF616A;
-    color: #B5E8E0;
+    background-color: #F38BA8;
+    color: #1E1E2E;
   }
 }
