@@ -1,139 +1,69 @@
+// ~/.config/fastfetch/config.jsonc
 {
+    
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "source": "~/.config/fastfetch/ascii.txt",
 	"type": "file",
      },
+    "display": {
+        "separator": "• "
+    },
     "modules": [
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
-        },
-        {
-            "type": "host",
-            "key": " PC",
-            "keyColor": "green"
-        },
-        {
-            "type": "cpu",
-            "key": "│ ├",
-            "keyColor": "green"
-        },
-        {
-            "type": "gpu",
-            "key": "│ ├󰍛",
-            "keyColor": "green"
-        },
-        {
-            "type": "memory",
-            "key": "│ ├󰍛",
-            "keyColor": "green"
-        },
-        {
-            "type": "disk",
-            "key": "└ └",
-            "keyColor": "green"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+            "format": "╭─────────────────────────────────────────────────╮"
         },
         {
             "type": "os",
-            "key": " OS",
-            "keyColor": "yellow"
+            "key": "  ",
+            "format": "{3}"
         },
+        {
+                    "type": "host",
+                    "key": "  "
+                },
         {
             "type": "kernel",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "bios",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "packages",
-            "key": "│ ├󰏖",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "shell",
-            "key": "└ └",
-            "keyColor": "yellow"
-        },
-        "break",
-        {
-            "type": "de",
-            "key": " DE",
-            "keyColor": "blue"
-        },
-        {
-            "type": "lm",
-            "key": "│ ├",
-            "keyColor": "blue"
+            "key": "  "
         },
         {
             "type": "wm",
-            "key": "│ ├",
-            "keyColor": "blue"
+            "key": "  "
         },
         {
-            "type": "wmtheme",
-            "key": "│ ├󰉼",
-            "keyColor": "blue"
+            "type": "shell",
+            "key": " $ "
         },
         {
             "type": "terminal",
-            "key": "└ └",
-            "keyColor": "blue"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-        },
-        "break",
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌────────────────────Uptime / Age / DT────────────────────┐"
-        },
-        {
-            "type": "command",
-            "key": "  OS Age ",
-            "keyColor": "magenta",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+            "key": "  "
         },
         {
             "type": "uptime",
-            "key": "  Uptime ",
-            "keyColor": "magenta"
+            "key": " 󰔚 "
         },
         {
-            "type": "datetime",
-            "key": "  DateTime ",
-            "keyColor": "magenta"
+            "type": "memory",
+            "key": " 󰍛 "
+        },
+        {
+            "type": "packages",
+            "key": "  "
+        },
+        {
+            "type": "command",
+            "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days",
+            "key": "  "
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└─────────────────────────────────────────────────────────┘"
+            "format": "╰─────────────────────────────────────────────────╯"
         },
-
-//        {
-//            "type": "colors"
-//        },
-
         {
-            "type": "colors",
-            "paddingLeft": 2,
-            "symbol": "circle"
+            "type": "custom",
+            "format": "     \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m "
         }
- 
     ]
 }

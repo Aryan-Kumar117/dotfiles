@@ -23,6 +23,7 @@ alias config='/usr/bin/git --git-dir=/home/aryan/.cfg/ --work-tree=/home/aryan'
 PROMPT_EOL_MARK=''
 export PATH="$HOME/.local/bin:$PATH"
 
+fastfetch
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
