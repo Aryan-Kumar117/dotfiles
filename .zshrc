@@ -23,7 +23,10 @@ alias config='/usr/bin/git --git-dir=/home/aryan/.cfg/ --work-tree=/home/aryan'
 PROMPT_EOL_MARK=''
 export PATH="$HOME/.local/bin:$PATH"
 
-fastfetch
+text="the end is never the end."
+width=$(tput cols)
+padding=$(((width - ${#text}) / 2))
+printf "%*s\033[31m%s\033[0m\n" $padding "" "$text"   
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
