@@ -25,6 +25,7 @@
     "pulseaudio_slider",
     "pulseaudio",
     "custom/cava",
+    "custom/cmus",
     "cava",
     "network",
     "battery"
@@ -178,10 +179,10 @@
   },
   "custom/cmus": {
     "format": "♪ {text}",
-    "interval": 10,
-    "exec": "cmus-remote -C \"format_print '%a - %t'\"",
+    "interval": 1,
+    "exec": "cmus-remote -Q | grep 'title ' | sed 's/.*title //'",
     "exec-if": "pgrep cmus",
     "on-click": "cmus-remote -u",
     "escape": true
-  }
+  }   
 }

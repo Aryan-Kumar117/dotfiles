@@ -63,6 +63,7 @@ window#waybar.hidden {
 #battery,
 #language,
 #cava,
+#custom-cmus,
 #backlight {
   color: #ECEFF4;
   margin-top: 6px;
@@ -257,6 +258,9 @@ window#waybar.hidden {
   background: #111111;
 }
 
+#custom-cmus{
+    background: #123456;
+}
 /* === Optional animation === */
 @keyframes blink {
   to {
