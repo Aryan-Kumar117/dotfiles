@@ -259,7 +259,8 @@ window#waybar.hidden {
 }
 
 #custom-cmus{
-    background: #123456;
+  background: linear-gradient(to right, #313244, red);
+  padding-left: 0px;
 }
 /* === Optional animation === */
 @keyframes blink {

@@ -22,6 +22,7 @@ alias rm='rm -i'
 alias config='/usr/bin/git --git-dir=/home/aryan/.cfg/ --work-tree=/home/aryan'
 PROMPT_EOL_MARK=''
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/home/aryan/.cargo/bin"
 
 text="the end is never the end."
 width=$(tput cols)

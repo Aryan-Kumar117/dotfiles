@@ -178,8 +178,8 @@
                    }
   },
   "custom/cmus": {
-    "format": "♪ {text}",
-    "interval": 1,
+    "format": "{text}",
+    "interval": 4,
     "exec": "cmus-remote -Q | grep 'title ' | sed 's/.*title //'",
     "exec-if": "pgrep cmus",
     "on-click": "cmus-remote -u",
